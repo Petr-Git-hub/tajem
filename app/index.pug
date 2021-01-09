@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+      link(rel="stylesheet",
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css",
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2",
+      crossorigin="anonymous")
+      link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+      link(rel="preconnect" href="https://fonts.gstatic.com")
+      link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous")
+      link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet")
+      link(rel="stylesheet", href="css/main.min.css")
+      title тестовое задание 
+      
+   body
+      header
+         div(class="container")
+            nav(class="header_nav")
+
+               a(class="logo", href="/")
+                  object(data="img/logo.svg", class="logo_img", type="image/svg+xml")
+                  span tajam
+
+               div(class="hamburger hamburger--collapse")
+                  div(class="hamburger-box")
+                     div(class="hamburger-inner")
+
+               ul(class="header_ul")
+                  -
+                   let header_menu = [
+                     {url: "/", text: "home"},
+                     {url: "/", text: "about"},
+                     {url: "/", text: "experties"},
+                     {url: "/", text: "teams"},
+                     {url: "/", text: "works"},
+                     {url: "/", text: "people say"},
+                     {url: "/", text: "contact"}
+                   ];
+                  each element in header_menu
+                  
+                     li(class="header_li")
+                        a(href=element.url, class="header_link") #{element.text}
+
+      div(class="agency fon_blue padding")
+         img(src="img/elki1.jpg", class="agency_img" alt="")
+         div(class="container")
+            h1(class="line") we are awesome creative agency
+            p(class="description") Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi soluta harum qui reprehenderit officia dolore nam sequi error, maxime ullam, explicabo voluptatum aut ex voluptates alias dicta. Ducimus, laborum! Quo!
+            a(class="btn", href="/") learn more
+
+      div(class="story padding")
+         div(class="container")
+            div(class="row")
+               div(class="col-md-5 d-none d-md-block")
+                  img(src="img/img_logo.png", alt="" class="story_img")
+               div(class="col-md-7")
+                  h2 uor story
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, alias modi. Deleniti consequatur commodi iusto harum exercitationem animi maxime voluptatibus odio nam velit cupiditate beatae, mollitia aut reiciendis consequuntur autem!
+                  p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias voluptates mollitia corporis incidunt nesciunt totam aspernatur consequuntur saepe tenetur provident. Et, libero? Nostrum esse enim quidem maxime fuga, deleniti earum.
+                  a(class="btn fonWhite", href="/") learn more
+
+
+      div(class="video padding fon_blue")
+         img(src="img/footer_img.jpg", alt="" class="fon_img")
+         div(class="container")
+            div(class="play")
+               a(class="play_link" data-fancybox href="https://youtu.be/KvUgaHTNit4")
+                  div(class="play_btn")
+                     svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="45")
+                        image(width="37" height="45" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAtCAYAAAApzaJuAAACwElEQVRYhcXZX2hPYRzH8Y81yoobZf6lXJh/oYgkN0jTFFrUSKj5kxS5cKUoWaEl5UYuRqJdiPzd/Ffyc8GNYrYllHYxYhckSe2tZz1nnc6e57f9fr/zO8+3vr+L55zf2Wvf77PnPOdMwBQgB3wH2oGVgEKm+bjL0DgPjA8FMx+/HSgTvcDOEKgKaSBdUS3poqR2SbM855QlDOifvTCSHkjqTfygtZI6JR3LTAX8jLVsBTAOuOVp6TtgTRZzKo7aHTtYD3zw4FqACVmhGhMnVADHPbA+YFcIVJRz87T0ETA/BCrKzcBnD+5EKJTJ0Rbgii6gLgQq3tI2D+4qUF0syrdwjiTeS6qT1CCpJ3H+VkndkvalsU4VUql4VgHNnqo9BhZl1T5XLgDue3AngVEhUFHuAHocsE5gQyjUcC1tBSaHQEW5BHjogP0CDoRCRbkd+OrA5Sx88NxSloRC47KkGklnE99bLumVpGZJY9JcEopp6VNH1T4BNVlWKh6vJa2S1Gg3kP322AxJN0KhomiRtFrSt9jYvNCobZLaJE2MjXVUBsIslHRKUm1i3NxDN2VdqSqLeeMAnZM0W1JXlpVqsH/2UxPjZtIfkpSLBrKolGnVPUmtCdBfSYclLY2DBqKM65TZoTZ57n3XgelZ3/u22IUwGR/tPj/v99NGzQFue6pzxlZv2OukhcrXqufAskKulwaq3tMq8zbnYDG/ZCko8zRz01Md8zQzrdhpUAzK7LOPejBmIm8scV4WjFoPdHtAp4HKUkGFoGYC1zwYM5EXp4EpBHUE6HdgzB57f5oYH2pP7OA6oMNTnSvApHKAXCjzJm9snlZ1W2xZMC6UadEd4IsH1DTSJ9w0UH88iCiepP1SbLisiG3ak9Enaa/dQ7/NYIszGAb1zDF+yT6jXcgSMxj2fzMvgR/AC6A2y1YNSdB/IZYgsGBnsLcAAAAASUVORK5CYII=")
+                  p(class="play_text") watch our story
+
+
+      div(class="experties padding")
+         div(class="container")
+            div(class="line")
+               h2 experties
+               p(class="subtitle") Lorem ipsum dolor sit amet proin gravida nibh velit
+
+            div(class="row")
+               -
+                let expCard = [
+                  {src: "img/expetrise_ic1.svg", title: "web design & development", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti expedita distinctio blanditiis repellendus minima."},
+                  {src: "img/expetrise_ic2.svg", title: "branding identity", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti expedita distinctio blanditiis repellendus minima."},
+                  {src: "img/expetrise_ic3.svg", title: "mobile app", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti expedita distinctio blanditiis repellendus minima."},
+                  {src: "img/expetrise_ic4.svg", title: "search engine optimization", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti expedita distinctio blanditiis repellendus minima."},
+                  {src: "img/expetrise_ic5.svg", title: "game develoment", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti expedita distinctio blanditiis repellendus minima."},
+                  {src: "img/expetrise_ic6.svg", title: "made with love", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti expedita distinctio blanditiis repellendus minima."}
+                ];
+               each experties in expCard
+                  div(class="col-md-4 experties_border")
+                     div(class="expCard")
+                        object(data=experties.src, class="expCard_img", type="image/svg+xml")
+                        h4(class="expCard_title") #{experties.title}
+                        p(class="expCard_text") #{experties.text}
+
+      div(class="teams padding fon_blue")
+         img(src="img/elki2.jpg", alt="" class="fon_img")
+         div(class="container")
+            div(class="line")
+               h2 meet our amazing team
+               p(class="subtitle") Lorem ipsum dolor sit amet proin gravida nibh velit
+
+            div(class="row")
+               -
+                let card = [
+                  {src: "/", title: "semf ucuk", text: "ceo & founder"},
+                  {src: "/", title: "dik adalin", text: "engineering"},
+                  {src: "/", title: "jeng kol", text: "designer"},
+                  {src: "/", title: "pet romak", text: "marketing"}
+                ];
+               each team in card
+                  div(class="col-lg-3 col-sm-6")
+                     div(class="card")
+                        div(class="card_img")
+                           img(src=team.src, alt="")
+                        div(class="card_body")
+                           h4(class="card_title") #{team.title}
+                           p(class="card_text") #{team.text}
+               div(class="card_click")
+                  p Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  a(class="btn", href="/") we are hiring
+
+
+      div(class="work padding")
+         div(class="container")
+            div(class="work_flex")
+               h2 our works
+               a(class="link", href="#") see all project in dribbleed
+         div(class="box_wrap")
+            -
+             let box = [
+               {style: "background-color: #b6b6b6"},
+               {style: "background-color: #acacac"},
+               {style: "background-color: #a1a1a1"},
+               {style: "background-color: #8a8a8a"},
+               {style: "background-color: #b6b6b6"},
+               {style: "background-color: #a4a4a4"},
+               {style: "background-color: #a4a4a4"},
+               {style: "background-color: #b6b6b6"},
+               {style: "background-color: #8a8a8a"},
+               {style: "background-color: #a1a1a1"},
+               {style: "background-color: #acacac"},
+               {style: "background-color: #b6b6b6"}
+             ];
+            each work in box
+               div(class="box", style=work.style)
+         div(class="container center")
+            a(class="btn fonWhite", href="/") learn more
+
+
+
+      div(class="slide padding fon_blue")
+         img(src="img/elki3.jpg", alt="" class="fon_img")
+         div(class="container")
+            div(class="slider-for")
+               -
+                let sliderCard = [
+                  {src: "img/comment_ic.svg", alt: "alt", name: "jane galadriel", prof: "ceo & founder", text: "aw"},
+                  {src: "img/comment_ic.svg", alt: "alt", name: "anna galadriel", prof: "engineering", text: "aw"},
+                  {src: "img/comment_ic.svg", alt: "alt", name: "ylia galadriel", prof: "designer", text: "aw"},
+                  {src: "img/comment_ic.svg", alt: "alt", name: "kate galadriel", prof: "marketing", text: "aw"},
+                  {src: "img/comment_ic.svg", alt: "alt", name: "ylia galadriel", prof: "designer", text: "aw"},
+                  {src: "img/comment_ic.svg", alt: "alt", name: "kate galadriel", prof: "marketing", text: "aw"}
+                ];
+               each slide in sliderCard
+                  div
+                     div(class="sliderCard")
+                        img(src=slide.src, class="sliderCard_img", alt=slide.alt)
+                        p(class="sliderCard_text") Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perspiciatis, quibusdam tenetur velit exercitationem obcaecati aut earum nostrum quidem quo? Facere fugiat incidunt, et repellendus quibusdam maiores placeat debitis voluptatum. Consequuntur, et similique? Odio sed eum molestias, labore autem odit accusamus obcaecati dolorem non, ab animi nemo, nisi harum reiciendis.
+                        h4(class="sliderCard_name") #{slide.name}
+                        p(class="sliderCard_prof") #{slide.prof}
+               
+            div(class="slider-nav")
+               -
+                let slideNav = [
+                  {src: "img/face1.jpg", alt: "alt" },
+                  {src: "img/face2.jpg", alt: "alt" },
+                  {src: "img/face3.jpg", alt: "alt" },
+                  {src: "img/face1.jpg", alt: "alt" },
+                  {src: "img/face2.jpg", alt: "alt" },
+                  {src: "img/face3.jpg", alt: "alt" }
+                ];
+               each slide in slideNav
+                  div(class="slider_navImg")
+                     img(src=slide.src, alt=slide.alt)
+
+
+      div(class="news padding")
+         div(class="container")
+            h2 give us good news
+            form(action="#", class="form")
+               input(type="text" class="form-control" id="" placeholder="Name")
+               input(type="text" class="form-control" id="" placeholder="Email")
+               input(type="text" class="form-control" id="" placeholder="Subject")
+               textarea(class="form-control" id="" placeholder="Yuor Message")
+               button(type="submit" class="btn fonWhite") submit
+
+
+
+
+      footer(class="footer padding fon_blue")
+         img(src="img/footer_img.jpg", alt="" class="fon_img")
+         div(class="container")
+            div(class="row")
+               div(class="col-md-4")
+                  a(class="logo", href="/")
+                     //- img(src="img/logo.svg", class="logo_img", alt="")
+                     object(data="img/logo.svg", class="logo_img", type="image/svg+xml")
+                     span tajam
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa corrupti, quaerat sint fugit quisquam earum.
+               div(class="col-md-4")
+                  h4 our studio
+                  div(class="vcard")
+                     div
+                        span(class="category") Ruko cucruk, jl. Radio luar dalam jos
+                     div(class="adr")
+                        span(class="street-address") No.12 - 13,Kalideres -  jakarta Barat
+                        span(class="locality") 11480 - indonesia
+                     div
+                        a(href="tel:+622122243333" class="tel") +62 21-2224 3333
+
+               div(class="col-md-4")
+                  h4 stay in touch
+                  form(action="#" class="footer_form")
+                     input(type="text", class="form-control" placeholder="Subscribe our newsletter")
+                     button(type="submit", class="submit")
+                        object(data="img/submit.svg", class="submit_obj", type="image/svg+xml")
+                  div(class="socseti")
+                     -
+                      let socseti = [
+                        {url: "/", class: "fb", src: "img/facebook.svg"},
+                        {url: "/", class: "twit", src: "img/twitter.svg"},
+                        {url: "/", class: "about", src: "img/dribbble.svg"},
+                        {url: "/", class: "in", src: "img/instagram.svg"},
+                        {url: "/", class: "gl", src: "img/google.svg"},
+                        {url: "/", class: "ytb", src: "img/youtube.svg"}
+                      ];
+                     each seti in socseti
+                        a(href=seti.url, class="ic " + seti.class)
+                           object(data=seti.src, class="ic_obj", type="image/svg+xml")
+
+               div(class="col-md-12")
+                  div(class="footer_flex")
+                     div(class="endLine")
+                        -
+                         let endLine = [
+                           {url: "#", text: "Help"},
+                           {url: "#", text: "Terms & condition"},
+                           {url: "#", text: "Privacy"}
+                         ];
+                        each link in endLine
+                           a(href=link.url, class="footer_link") #{link.text}
+                     p(class="copyright") Copyright © 2015 Tajem Creative
+
+
+
+
+
+
+
+
+
+
+
+
+
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+      script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous")
+
+      script(rel="script" src="js/main.min.js")
